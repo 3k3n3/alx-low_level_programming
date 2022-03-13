@@ -7,9 +7,9 @@
  */
 int main(void)
 {
-	char h;
+	int h;
 
-	for (h = '0x0' ; h <= '0xf' ; h++)
+	for (h = 0x0 ; h <= 0xf ; h++)
 	{
 		putchar(h);
 	}
