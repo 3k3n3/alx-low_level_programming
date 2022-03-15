@@ -5,7 +5,7 @@
  * print the alphabet in lower case
  * Return: Always 0
  */
-int main(void)
+void print_alphabet(void)
 {
 	int alpha;
 
@@ -14,6 +14,10 @@ int main(void)
 		putchar(alpha);
 	}
 	putchar('\n');
-
-	return 0;
 }
+
+int main(void)
+{
+	print_alphabet();
+	return (0);
+}	
