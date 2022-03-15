@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - check the code
@@ -9,7 +9,7 @@ int main(void)
 {
 	int alphabet;
 	int times;
-	
+
 	for (times = 1 ; times <= 10 ; times++)
 	{
 		for (alphabet = 'a' ; alphabet <= 'z' ; alphabet++)
@@ -18,6 +18,6 @@ int main(void)
 		}
 		putchar('\n');
 	}
-	
+
 	return (0);
-}	
+}
