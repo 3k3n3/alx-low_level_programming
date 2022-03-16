@@ -8,7 +8,7 @@ int print_last_digit(int a)
 {
         int n;
 
-        if (n < 10)
+        if (a < 10)
 	{
         	return (n);
 	}
@@ -22,4 +22,6 @@ int print_last_digit(int a)
 		n = a % 100;
 		return (n);
 	}
+
+	return (1);
 }
