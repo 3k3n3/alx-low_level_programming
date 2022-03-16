@@ -3,12 +3,11 @@
 /**
  * main - check the code
  * print the alphabet in lower case 10 times
- * Return: Always 0
+ * Return: Always void
  */
-void print_alphabet_x10(void);
-int main(void)
+void print_alphabet_x10(void)
 {
-	int alphabet;
+	char alphabet;
 	int times;
 
 	for (times = 1 ; times <= 10 ; times++)
@@ -18,7 +17,4 @@ int main(void)
 			putchar(alphabet);
 		}
 		putchar('\n');
-	}
-
-	return (0);
 }
