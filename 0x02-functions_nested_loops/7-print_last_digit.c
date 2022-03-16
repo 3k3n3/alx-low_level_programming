@@ -10,7 +10,7 @@ int print_last_digit(int a)
 
         if (a < 10)
 	{
-    		n = n;
+    		n = a;
 	}
         else if (a > 10 && a < 100)
 	{
