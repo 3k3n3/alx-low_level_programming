@@ -10,17 +10,15 @@ int print_last_digit(int a)
 
         if (a < 10)
 	{
-        	return (n);
+    		n = n
 	}
         else if (a > 10 && a < 100)
 	{
 		n = a % 100;
-		return (n);
 	}
 	else if (a > 100 && a < 1000)
 	{	
 		n = a % 100;
-		return (n);
 	}
 
 	return (1);
