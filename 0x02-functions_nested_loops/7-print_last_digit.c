@@ -4,22 +4,21 @@
  * print_last_digit - print the last digit in a number
  * Return : n
  */
-int print_last_digit(int a)
+int print_last_digit(int i)
+
 {
-        int n;
+	int n;
 
-        if (a < 10)
+	if (i < 0)
 	{
-    		n = a;
+		i = -i;
 	}
-        else if (a > 10 && a < 100)
+	n = i % 10;
+	if (n < 0)
 	{
-		n = a % 100;
+		n = -n;
 	}
-	else if (a > 100 && a < 1000)
-	{	
-		n = a % 100;
-	}
+	_putchar(n + '0');
 
-	return (1);
+	return (n);
 }
