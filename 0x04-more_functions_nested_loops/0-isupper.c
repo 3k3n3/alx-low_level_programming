@@ -2,14 +2,12 @@
 
 /**
  * _isupper: this code checks for upper case
- *
+ * @c: int
  * Return: Always 0
  */
 int _isupper(int c)
 {
-	int c;
-
-	if (c <= 'A' && c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 	{
 		return(1);
 	}
