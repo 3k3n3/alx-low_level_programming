@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_number: prints numbers
+ * print_number - prints numbers
  * @c: int
  * Return: void
  */
@@ -15,5 +15,5 @@ void print_numbers(void);
 	}
 	_putchar('\n');
 
-	return (0);
+	return (c);
 }
