@@ -1,11 +1,9 @@
 #include "main.h"
 
 /**
- * mul - multiplies a and b
+ * mul - (int a, int b) multiplies a and b
  * @a: first int
  * @b: second int
- *
- * @c: product
  * Return: a * b
  */
 int mul(int a, int b)
