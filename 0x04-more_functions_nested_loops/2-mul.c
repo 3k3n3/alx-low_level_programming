@@ -4,6 +4,7 @@
  * mul - multiplies a and b
  * @a: first int
  * @b: second int
+ *
  * @c: product
  * Return: a * b
  */
