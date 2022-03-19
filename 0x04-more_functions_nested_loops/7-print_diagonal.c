@@ -1,22 +1,18 @@
 #include "main.h"
 
 /**
- * print_diagonal - uses '\' to print diagonal lines
+ * print_line - uses '_' to print lines
  * @n: int
  * Return: void
  */
-void print_diagonal(int n)
+void print_line(int n)
 {
 	int c;
 
-	do {
-		_putchar('\n');
-		n++;
-	} while (n <= 0);
-
-	for (c = 0 ; c > n ; c++)
+	for (c = 0 ; c < n ; c++)
 	{
-		_putchar('\\');
+		_putchar('_');
 	}
+	_putchar('\n');
 }
 
