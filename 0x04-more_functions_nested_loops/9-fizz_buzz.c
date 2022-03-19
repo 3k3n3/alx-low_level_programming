@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - famous fizz buzz in c
+ * main - fizz buzz multiples of 3 and 5
  *
  * Return: Always(0)
  */
@@ -9,7 +9,7 @@ int main(void)
 {
 	int i;
 
-	for (i = 1; i <= 99; i++)
+	for (i = 1 ; i <= 99 ; i++)
 	{
 		if (i % 15 == 0)
 		{
