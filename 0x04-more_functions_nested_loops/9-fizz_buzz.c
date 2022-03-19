@@ -2,7 +2,7 @@
 
 /**
  * main - famous fizz buzz in c
- * 
+ *
  * Return: Always(0)
  */
 int main(void)
