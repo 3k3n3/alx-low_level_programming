@@ -11,6 +11,7 @@ void print_diagonal(int n)
 
 	do {
 		_putchar('\n');
+		n++;
 	} while (n <= 0);
 
 	for (c = 0 ; c > n ; c++)
