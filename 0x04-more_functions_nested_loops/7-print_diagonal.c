@@ -7,7 +7,7 @@
  */
 void print_diagonal(int n)
 {
-	int c;
+	int c, b;
 
 	for (c = 0 ; c <= n ; c++)
 	{
