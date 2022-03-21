@@ -2,25 +2,15 @@
 
 /**
  * print_rev - print in reverse
- *
+ * @s: string [CODE DOES NOT RUN CORRECTLY]
  * Return: void
  */
 void print_rev(char *s)
 {	
-	int i, len, temp;
-	char ptr[1000];
-
-	for (i = 0, len = 0; s[i] != '\0'; ++i, ++len)
-		;
-
-	for (i = 0; i < len; ++i)
+	while (*s != '\0')
 	{
-		ptr[i] = s[i];
+		_putchar(*s);
+		s--;
 	}
-
-	temp = len - 1;
-	for (i = 0; i < len; ++i, --temp)
-	{
-		s[i] = ptr[temp];
-	}
+	_putchar('\n')
 }
