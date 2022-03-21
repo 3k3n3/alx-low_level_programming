@@ -12,7 +12,6 @@ int _strlen(char *s)
 
 	while(*s!='\0')
 	{
-	_putchar(*s);
 	c++;
 	}
 	return (0);
