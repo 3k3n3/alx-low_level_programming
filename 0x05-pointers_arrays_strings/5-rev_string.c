@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_rev - print in reverse
+ * rev_string - print in reverse
  * @s: string [CODE DOES NOT RUN CORRECTLY]
  * Return: void
  */
