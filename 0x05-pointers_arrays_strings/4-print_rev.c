@@ -26,11 +26,11 @@ void print_rev(char *s)
 		end--;
 	}
 }
-int string_length(char *pointer)
+/*int string_length(char *pointer)
 {
 	int c = 0;
 
 	while (*(pointer + c) != '\0')
 		c++;
 	return c;
-}
+}*/
