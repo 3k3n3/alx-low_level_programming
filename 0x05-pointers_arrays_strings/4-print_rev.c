@@ -7,30 +7,20 @@
  */
 void print_rev(char *s)
 {	
-	int length, c;
-	char *begin, *end, temp;
+	int i, len, temp;
+	char ptr[1000];
 
-	length = string_length(s);
-	begin = s;
-	end = s;
+	for (i = 0, len = 0; s[i] != '\0'; ++i, ++len)
+		;
 
-	for (c = 0; c < length - 1; c++)
-		end++;
-	for (c = 0; c < length / 2; c++)
+	for (i = 0; i < len; ++i)
 	{
-		temp = *end;
-		*end = *begin;
-		*begin = temp;
+		ptr[i] = s[i];
+	}
 
-		begin++;
-		end--;
+	temp = len - 1;
+	for (i = 0; i < len; ++i, --temp)
+	{
+		s[i] = ptr[temp];
 	}
 }
-/*int string_length(char *pointer)
-{
-	int c = 0;
-
-	while (*(pointer + c) != '\0')
-		c++;
-	return c;
-}*/
