@@ -2,7 +2,9 @@
 
 /**
  * _memset - fill memory with constant byte
- *
+ * @s: str
+ * @b; char
+ * @n: bytes
  * Return: null
  */
 char *_memset(char *s, char b, unsigned int n)
