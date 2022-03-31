@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- *
- *
- *
+ * _puts_recursion - print a str with
+ * @*s: points to value of str s
+ * Return: void
  */
 void _puts_recursion(char *s)
 {
