@@ -2,6 +2,7 @@
 
 /**
  * _puts_recursion - print a str with
+ * @s: str
  * @*s: points to value of str s
  * Return: void
  */
