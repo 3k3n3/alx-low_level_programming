@@ -2,9 +2,9 @@
 #include "main.h"
 
 /**
- * main - print number of arguments 
+ * main - print number of arguments
  * @argc: argument count
- * @argv: argument vector⁫
+ * @argv: argument vector
  * Return: 0 success
  */
 int main(int argc, char *argv[])
