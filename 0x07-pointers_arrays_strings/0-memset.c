@@ -3,7 +3,7 @@
 /**
  * _memset - fill memory with constant byte
  * @s: str
- * @b; char
+ * @b: char
  * @n: bytes
  * Return: null
  */
