@@ -5,7 +5,7 @@
  * string_nconcat - concat two strings
  * @s1: first string
  * @s2: second string
- * @n: number of characters to take from the second string
+ * @n: number of characters to take from the second str
  * Return: a pointer to the new concatenated string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
