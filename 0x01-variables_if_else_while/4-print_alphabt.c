@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int c;
+
+	c = 97;
+	while (c < 123)
+	{
+		if (c != 113 && c != 101)
+			putchar(c);
+		c++;
+	}
+	putchar('\n');
+	return (0);
+}
