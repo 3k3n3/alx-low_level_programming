@@ -2,6 +2,7 @@
 
 /**
  * _islower - Checks for lowercase
+ * @c: character
  *
  * Return: 1 if lowercase else 0
  */
@@ -13,8 +14,8 @@ int _islower(int c)
 	while (i <= 122)
 	{
 		if (i == c)
-			return 1;
+			return (1);
 		i++;
 	}
-	return 0;
+	return (0);
 }
