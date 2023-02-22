@@ -3,17 +3,27 @@
 /**
  * main - Entry point
  *
- * Return: void
+ * Return: 0
  */
 int main(void)
 {
-	int x, g;
+	int i, j, x, c;
+
 	printf("1, 2, ");
-	x = 1;
-	while (x < 50)
+	i = 1;
+	j = 2;
+	while (c <= 50)
 	{
-		g = x;
-		printf("%d, ", x+g);
-		x++;
+		x = i + j;
+		if (c != 50)
+			printf("%d, ", x);
+		if (c == 50)
+			printf("%d", x);
+		i += 1;
+		i = j;
+		j = x;
+		c++;
 	}
+	printf("\n");
+	return (0);
 }
