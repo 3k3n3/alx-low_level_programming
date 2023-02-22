@@ -5,7 +5,7 @@
  *
  * Return: Always 0 (Success)
  */
-void main(void)
+int main(void)
 {
 	int x, y;
 
@@ -18,4 +18,5 @@ void main(void)
 		x++;
 	}
 	printf("%d\n", y);
+	return (0);
 }
