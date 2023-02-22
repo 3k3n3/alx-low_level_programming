@@ -7,18 +7,19 @@
  */
 int main(void)
 {
-	int i, j, x, c;
+	unsigned long i, j, x, c;
 
 	printf("1, 2, ");
 	i = 1;
 	j = 2;
-	while (c <= 50)
+	c = 0;
+	while (c < 48)
 	{
 		x = i + j;
-		if (c != 50)
-			printf("%d, ", x);
-		if (c == 50)
-			printf("%d", x);
+		if (c != 48)
+			printf("%lu, ", x);
+		if (c == 47)
+			printf("%lu", x);
 		i += 1;
 		i = j;
 		j = x;
