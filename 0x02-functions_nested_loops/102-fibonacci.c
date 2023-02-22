@@ -13,10 +13,10 @@ int main(void)
 	i = 1;
 	j = 2;
 	c = 0;
-	while (c < 48)
+	while (c <= 47)
 	{
 		x = i + j;
-		if (c != 48)
+		if (c != 47)
 			printf("%lu, ", x);
 		if (c == 47)
 			printf("%lu", x);
