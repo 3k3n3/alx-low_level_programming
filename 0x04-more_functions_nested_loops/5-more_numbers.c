@@ -13,8 +13,9 @@ void more_numbers(void)
 	while (y <= 10)
 	{
 		x = 0;
-		while (x <= 15)
-		{	if (x > 9)
+		while (x < 15)
+		{
+			if (x > 9)
 				_putchar(1 + '0');
 			_putchar((x % 10) + '0');
 			x++;
