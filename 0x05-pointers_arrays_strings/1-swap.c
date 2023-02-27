@@ -2,6 +2,8 @@
 
 /**
  * swap_int - swap 2 integers throught their pointers
+ * @a: pointer to a
+ * @b: pointer to b
  *
  * Return: void
  */
@@ -14,6 +16,4 @@ void swap_int(int *a, int *b)
 
 	*b = j;
 	*a = i;
-
-	
 }
