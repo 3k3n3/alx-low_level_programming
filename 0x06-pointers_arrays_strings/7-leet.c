@@ -8,21 +8,18 @@
  */
 char *leet(char *s)
 {
-	int i;
-	/*char [] = ['a', 'A', 'e'. 'E', 'o', 'O', 't', 'T', 'l', 'L'];*/
+	int i, j;
+
+	char x[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	char y[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == 'a' || s[i] == 'A')
-			s[i] = 52;
-		else if (s[i] == 'e' || s[i] == 'E')
-			s[i] = 51;
-		else if (s[i] == 'o' || s[i] == 'O')
-			s[i] = 48;
-		else if (s[i] == 't' || s[i] == 'T')
-			s[i] = 55;
-		else if (s[i] == 'l' || s[i] == 'L')
-			s[i] = 49;
+		for (j = 0; j < 10; j++)
+		{
+			if (s[i] == x[j])
+				s[i] = y[j];
+		}
 	}
 	return (s);
 }
