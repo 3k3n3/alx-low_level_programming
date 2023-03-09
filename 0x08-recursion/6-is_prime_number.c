@@ -16,7 +16,7 @@ int is_prime_number(int n)
 		return (1);
 	if (n % 2 == 0 || n % 3 == 0)
 		return (0);
-	return (prime_number(n , 3));
+	return (prime_number(n, 3));
 }
 
 /**
@@ -32,5 +32,5 @@ int prime_number(int n, int i)
 		return (0);
 	if (i * i > n)
 		return (1);
-	return prime_number(n, i + 2);
+	return (prime_number(n, i + 2));
 }
