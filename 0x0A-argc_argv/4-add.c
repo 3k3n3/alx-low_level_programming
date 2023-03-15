@@ -1,7 +1,5 @@
 #include "main.h"
 
-#include <ctype.h>
-#include <stdlib.h>
 /**
  * main - Entry point for sum function
  * @argc: argument count
