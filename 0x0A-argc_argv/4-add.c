@@ -1,6 +1,7 @@
 #include "main.h"
 
-
+#include <ctype.h>
+#include <stdlib.h>
 /**
  * main - Entry point for sum function
  * @argc: argument count
@@ -10,29 +11,29 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, sum;
+	int  sum, i, j;
 
 	sum = 0;
-	if (argc > 1)
+	for (i = 1; i < argc; i++)
 	{
-		for (i = 1; i < argc; i++)
+		char *arg = argv[i];
+
+		for (j = 0; arg[j] != '\0'; j++)
 		{
-			if (atoi(argv[i]))
-			{
-				sum += atoi(argv[i]);
-			}
-			else
+			if (!isdigit(arg[j]))
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		printf("%d\n", sum);
+		if (atoi(arg) <= 0)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		sum += atoi(arg);
 	}
-	else
-	{
-		printf("0\n");
-	}
+	printf("%d\n", sum);
 
 	return (0);
 }
