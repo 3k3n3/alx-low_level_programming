@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *str_concat - concatenates two strings
+ * str_concat - concatenates two strings
  * @s1: string 1
  * @s2: string 2
  *
@@ -20,7 +20,7 @@ char *str_concat(char *s1, char *s2)
 	s3 = malloc(sizeof(char) * (len1 + len2 + 1));
 	if (s3 == NULL)
 		return (NULL);
-	
+
 	if (s1)
 	{
 		while (i < len1)
