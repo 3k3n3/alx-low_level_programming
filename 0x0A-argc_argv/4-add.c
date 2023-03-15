@@ -1,7 +1,8 @@
 #include "main.h"
 
+
 /**
- * main - Entry point
+ * main - Entry point for sum function
  * @argc: argument count
  * @argv: argument vector
  *
@@ -32,5 +33,6 @@ int main(int argc, char *argv[])
 	{
 		printf("0\n");
 	}
+
 	return (0);
 }
