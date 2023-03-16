@@ -1,31 +1,39 @@
 #include "main.h"
 
 /**
- * cap_string - capitalise first letter to uppercase
- * @s: string
- *
- * Return: char
+ * cap_string - capitalize all words of a string
+ * @str: string
+ * Return: `str`
  */
-char *cap_string(char *s)
-{
-	int i, j;
 
-	for (i = 0; s[i] != '\0'; i++)
+char *cap_string(char *str)
+{
+	int i, c;
+	int trigger;
+	char nots[] = ",;.!?(){}\n\t\" ";
+
+	for (i = 0, trigger = 0; str[i] != '\0'; i++)
 	{
-		for (j = 97; j <= 122; j++)
+		if (str[0] > 96 && str[0] < 123)
+			trigger = 1;
+		for (c = 0; nots[c] != '\0'; c++)
 		{
-			if (s[i] == j)
+			if (nots[c] == str[i])
+				trigger = 1;
+		}
+
+		if (trigger)
+		{
+			if (str[i] > 96 && str[i] < 123)
 			{
-				if (s[i - 1] == '{' || s[i - 1] == ' ' || s[i - 1] == '\n' ||
-				s[i - 1] == ',' || s[i - 1] == ';' || s[i - 1] == '.' ||
-				s[i - 1] == '!' || s[i - 1] == '?' || s[i - 1] == '"' ||
-				s[i - 1] == '(' || s[i - 1] == ')' || s[i - 1] == '}' ||
-				s[i - 1] == '\t')
-				{
-					s[i] = j - 32;
-				}
+				str[i] -= 32;
+				trigger = 0;
 			}
+			else if (str[i] > 64 && str[i] < 91)
+				trigger = 0;
+			else if (str[i] > 47 && str[i] < 58)
+				trigger = 0;
 		}
 	}
-	return (s);
+	return (str);
 }
