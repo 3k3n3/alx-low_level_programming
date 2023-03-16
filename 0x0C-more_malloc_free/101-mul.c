@@ -1,8 +1,6 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
-
-
+int _putchar(char c);
+void *malloc_checked(unsigned int b);
 /**
  * _print - moves a string one place to the left and prints the string
  * @str: string to move
