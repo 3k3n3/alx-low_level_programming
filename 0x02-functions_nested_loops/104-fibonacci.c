@@ -7,7 +7,8 @@
  */
 int main(void)
 {
-	unsigned long i, j, x, c;
+	unsigned long long i, j, x;
+	int c;
 
 	printf("1, 2, ");
 	i = 1;
@@ -17,9 +18,9 @@ int main(void)
 	{
 		x = i + j;
 		if (c != 98)
-			printf("%lu, ", x);
+			printf("%llu, ", x);
 		if (c == 98)
-			printf("%lu", x);
+			printf("%llu", x);
 		i += 1;
 		i = j;
 		j = x;
