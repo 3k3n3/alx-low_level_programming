@@ -1,23 +1,6 @@
 #include "function_pointers.h"
 
 /**
- * print_opcodes - print opcodes
- * @start: pointer to start of code block
- * @num_bytes: num of bytes
- *
- * Return: void
- */
-void print_opcodes(unsigned char *start, int num_bytes)
-{
-	int i;
-
-	/*printf("Opcodes of main function:\n");*/
-	for (i = 0; i < num_bytes; i++)
-		printf("%02x ", start[i]);
-	printf("\n");
-}
-
-/**
  * main - Entry point
  * @argc: argument count
  * @argv: argument vector
@@ -26,13 +9,14 @@ void print_opcodes(unsigned char *start, int num_bytes)
  */
 int main(int argc, char **argv)
 {
+	int num_bytes, i;
+	char *arr;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
-
-	int num_bytes;
 
 	num_bytes = atoi(argv[1]);
 	if (num_bytes < 0)
@@ -41,11 +25,17 @@ int main(int argc, char **argv)
 		exit(2);
 	}
 
-	/*Get the starting address of the main function*/
-	unsigned char *start = (unsigned char *) &main;
+	arr = (char *)main;
 
-	/*Print the opcodes*/
-	print_opcodes(start, num_bytes);
+	for (i = 0; i < num_bytes; i++)
+	{
+		if (i == num_bytes - 1)
+		{
+			printf("%02hhx\n", arr[i]);
+			break;
+		}
+		printf("%02hhx ", arr[i]);
+	}
 
 	return (0);
 }
