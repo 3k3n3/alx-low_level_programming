@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 	if (argc != 2)
 	{
 		printf("Error\n");
-		return (1);
+		exit(1);
 	}
 
 	int num_bytes;
@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 	if (num_bytes < 0)
 	{
 		printf("Error\n");
-		return (2);
+		exit(2);
 	}
 
 	/*Get the starting address of the main function*/
