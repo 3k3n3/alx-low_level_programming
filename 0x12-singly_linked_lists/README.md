@@ -1,4 +1,4 @@
-##0x12. C - Singly linked lists
+## 0x12. C - Singly linked lists
 
 Additional Resources  
 - [Linked Lists](https://www.learn-c.org/en/Linked_lists)
