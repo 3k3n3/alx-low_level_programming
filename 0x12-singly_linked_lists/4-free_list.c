@@ -2,7 +2,7 @@
 
 /**
  * free_list - free memory
- * @head; head of linkedlist
+ * @head: head of linkedlist
  *
  * Return: void
  */
