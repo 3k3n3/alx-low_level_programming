@@ -1,0 +1,41 @@
+#include "lists.h"
+
+/**
+ * insert_nodeint_at_index - insert n in linkedlist at index idx
+ * @head: head of linkedlist
+ * @idx: index of node
+ * @n: integer
+ *
+ * Return: address of new node else null
+ */
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+{
+	unsigned int i = 0;
+	listint_t *new_node, *temp;
+	listint_t *current;
+
+	new_node = (listint_t *) malloc(sizeof(listint_t));
+	if (new_node == NULL)
+		return (NULL);
+
+	if (*head == NULL)
+	{
+		*head = new_node;
+		return (new_node);
+	}
+	current = *head;
+
+	while (current->next != NULL)
+	{
+		if (i == (idx - 1))
+		{
+			temp = current->next;
+			current->next = new_node;
+			new_node->n = n;
+			new_node->next = temp;
+		}
+		current = current->next;
+		i++;
+	}
+	return (new_node);
+}
