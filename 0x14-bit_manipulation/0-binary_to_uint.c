@@ -20,7 +20,6 @@ unsigned int binary_to_uint(const char *b)
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
 	}
-
 	i -= 1;
 	for (j = 0; b[j] != '\0'; j++)
 	{
@@ -42,8 +41,9 @@ unsigned int binary_to_uint(const char *b)
 			add += mul;
 			mul = 1;
 		}
+		else
+			return (0);
 	}
-
 	if (b[j - 1] == '1')
 		return (add);
 	else
