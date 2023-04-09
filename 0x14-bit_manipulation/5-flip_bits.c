@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * flip_bits: number of bits to be flipped to get n from m
+ * flip_bits - number of bits to be flipped to get n from m
  * @n: int 1
- * @n: int 2
+ * @m: int 2
  *
  * Return: Numbe rof bits to be flipped
  */
@@ -17,7 +17,6 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	int count = 0;
 
 	unsigned long int i = n ^ m;
-	i = i;
 
 	while (x < 64 && (n >> x) > 0)
 		x++;
@@ -34,7 +33,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	for (x = 0; binary1[x] != '\0' && binary2[x] != '\0'; x++)
 	{
 		if (binary2[x] != binary1[x])
-				count++;
+			count++;
 	}
 	return (count);
 }
