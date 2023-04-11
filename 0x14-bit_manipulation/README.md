@@ -10,3 +10,5 @@
 Useful Resource:
 - [Bitwise Operators](https://www.programiz.com/c-programming/bitwise-operators)
 - [Converting between number bases](https://www.circuitbread.com/tutorials/binary-hexadecimal-and-other-base-numbers)
+- [Crackme](https://alaedine07.github.io/posts/first-crackme/)
+
