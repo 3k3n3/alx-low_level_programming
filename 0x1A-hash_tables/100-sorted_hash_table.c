@@ -28,12 +28,53 @@ shash_table_t *shash_table_create(unsigned long int size)
 }
 
 /**
- * shash_table_set - add element to a sorted hash table
- * @ht: pointer to sorted hash table.
- * @key: key to add - cant be an empty string.
- * @value: value associated with key.
+ * insert_sorted_node - Inserts node into sorted linkedlist of sorted ht
+ * @ht: A pointer to the sorted hash table.
+ * @new_node: The node to be inserted.
  *
- * Return: 1 if success else 0
+ * Return: void
+ */
+void insert_sorted_node(shash_table_t *ht, shash_node_t *new_node)
+{
+	shash_node_t *tmp;
+
+	if (ht->shead == NULL)
+	{
+		new_node->sprev = NULL;
+		new_node->snext = NULL;
+		ht->shead = new_node;
+		ht->stail = new_node;
+	}
+	else if (strcmp(ht->shead->key, new_node->key) > 0)
+	{
+		new_node->sprev = NULL;
+		new_node->snext = ht->shead;
+		ht->shead->sprev = new_node;
+		ht->shead = new_node;
+	}
+	else
+	{
+		tmp = ht->shead;
+		while (tmp->snext != NULL && strcmp(tmp->snext->key, new_node->key) < 0)
+			tmp = tmp->snext;
+		new_node->sprev = tmp;
+		new_node->snext = tmp->snext;
+		if (tmp->snext == NULL)
+			ht->stail = new_node;
+		else
+			tmp->snext->sprev = new_node;
+		tmp->snext = new_node;
+	}
+}
+
+/**
+ * shash_table_set - Adds an element to a sorted hash table.
+ * @ht: A pointer to the sorted hash table.
+ * @key: The key to add - cannot be an empty string.
+ * @value: The value associated with the key.
+ *
+ * Return: Upon failure - 0.
+ *         Otherwise - 1.
  */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
@@ -47,7 +88,6 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	value_copy = strdup(value);
 	if (value_copy == NULL)
 		return (0);
-
 	index = key_index((const unsigned char *)key, ht->size);
 	tmp = ht->shead;
 	while (tmp)
@@ -60,7 +100,6 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		}
 		tmp = tmp->snext;
 	}
-
 	new = malloc(sizeof(shash_node_t));
 	if (new == NULL)
 	{
@@ -77,35 +116,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	new->value = value_copy;
 	new->next = ht->array[index];
 	ht->array[index] = new;
-
-	if (ht->shead == NULL)
-	{
-		new->sprev = NULL;
-		new->snext = NULL;
-		ht->shead = new;
-		ht->stail = new;
-	}
-	else if (strcmp(ht->shead->key, key) > 0)
-	{
-		new->sprev = NULL;
-		new->snext = ht->shead;
-		ht->shead->sprev = new;
-		ht->shead = new;
-	}
-	else
-	{
-		tmp = ht->shead;
-		while (tmp->snext != NULL && strcmp(tmp->snext->key, key) < 0)
-			tmp = tmp->snext;
-		new->sprev = tmp;
-		new->snext = tmp->snext;
-		if (tmp->snext == NULL)
-			ht->stail = new;
-		else
-			tmp->snext->sprev = new;
-		tmp->snext = new;
-	}
-
+	insert_sorted_node(ht, new);
 	return (1);
 }
 
