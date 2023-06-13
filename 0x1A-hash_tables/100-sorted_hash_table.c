@@ -33,8 +33,15 @@ shash_table_t *shash_table_create(unsigned long int size)
 }
 
 
-/*******************************/
 
+/**
+ * shash_table_set - Inserts or updates a key/value pair in a sorted hash table
+ * @ht: Pointer to the sorted hash table
+ * @key: The key string
+ * @value: The value associated with the key
+ *
+ * Return: 1 on success, 0 on failure
+ */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	shash_node_t *new_node, *current_node, *prev_node;
@@ -94,9 +101,6 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	}
 	return (1);
 }
-
-
-/*******************************/
 
 /**
  * shash_table_get - Retrieves value associated with key from sorted hash table
