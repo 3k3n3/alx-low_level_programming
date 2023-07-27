@@ -1,4 +1,8 @@
+#!/usr/bin/python3
+"""Grid is a list of list of integers with 0=water and 1=land."""
+
 def island_perimeter(grid):
+    """Returns the perimeter of the island."""
     rows = 0
     per = 0
     for row in grid:
